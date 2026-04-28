@@ -7,7 +7,7 @@ st.set_page_config(page_title="Climate Dashboard", layout="wide")
 
 st.title("🌍 Climate Dashboard")
 
-countries = ["Ethiopia", "Kenya", "Nigeria", "Egypt"]
+countries = ["Ethiopia", "Kenya", "Nigeria", "Egypt", "Tanzania"]
 years = list(range(2000, 2024))
 
 rows = []
@@ -41,7 +41,7 @@ year_range = st.sidebar.slider(
 
 variable = st.sidebar.selectbox(
     "Variable",
-    ["T2M", "PRECTOTCORR", "RH2M"]
+    ["T2M", "PRECTOTCORR", "RH2M","WS2M", "PS", "QV2M"]
 )
 
 filtered = df[
